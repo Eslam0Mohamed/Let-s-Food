@@ -121,7 +121,7 @@ border-radius: 20px;
 color: black;
   }
 
-span.bars{
+.bars-menu{
   display: none;
 }
   .landing{
@@ -177,24 +177,38 @@ position: relative;
     border-radius: 50%;
      /* z-index: 5; */
   }
+
+    /* ...............................mobile responsive....... landing............ */
+    @media (max-width:768px){
+      .landing{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+
+  /* ...............................tablet responsive....... landing............ */
+
   @media (max-width: 992px) {
-    span.bars {
+    .bars-menu {
    display: block;
     }
+.navbar{
+  position: relative;
+}
+
     .nav{
       position: absolute;
       top: 100%;
+      left: 0;
       display: none;
     }
-    .nav ul{
+    .nav .links{
       display: flex;
       flex-direction: column;
       margin-top: 10px;
-      
     }
-  span.bars:hover .nav{
-      display: block
-      
+   .header .container .bars-menu:hover .nav{
+      display: block;
     }
     .landing{
       display: grid;
@@ -205,6 +219,9 @@ position: relative;
         }
 
   }
+
+  /* ...............................mobile responsive........landing........... */
+
   .section{
     padding-top: var(--main-top-padding);
     /* padding-bottom: var(--main-bottom-padding); */
@@ -299,6 +316,7 @@ font-size: 22px;
   font-weight: bold;
   font-size: 22px;
 }
+  /* ...............................tablet responsive....... menu............ */
 
 @media (max-width:992px){
   .menu-box{
@@ -374,6 +392,16 @@ margin-left: 30px;
   color: rgba(29, 29, 29, 0.7);
   
 }
+
+@media (max-width:768px){
+  .customers{
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+/* ...............................tablet responsive....... clients............ */
+
 @media (max-width:992px){
   .clients .container{
     display: flex;
@@ -405,6 +433,7 @@ margin-left: 30px;
     margin-top: 20px;
   }
 }
+
 .footer {
   position: relative;
   background-color: rgba(255, 249, 234, 1);
@@ -468,6 +497,8 @@ border-bottom: none;
   left: 50%;
   transform: translateX(-50%);
 }
+  /* ...............................tablet responsive....... footer............ */
+
 @media (max-width:992px){
   .footer .container{
     display: grid;
